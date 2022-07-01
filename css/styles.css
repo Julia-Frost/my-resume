@@ -53,7 +53,6 @@ svg {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px 0 0;
 }
 
 .visualy-hiden {
@@ -108,7 +107,7 @@ svg {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
-  width: 1200px;
+
   background-color: #ffffff;
   margin: 40px auto;
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
@@ -246,7 +245,34 @@ svg {
 }
 
 .contacts-link {
-  color: #bcc207;
+  color: #42adff;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.social-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(circle, #faa554 0%, #ff5571 100%);
+  border-radius: 50%;
+  padding: 5px;
+  fill: #ffffff;
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
 }
 
 .tech-skills-item:not(:last-child) {
@@ -259,4 +285,43 @@ svg {
 
 .languages-item:not(:last-child) {
   margin-bottom: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .container {
+    max-width: 768px;
+    padding: 0 15px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Оформление */
+
+  .main-information {
+    padding: 30px;
+  }
+
+  .about-name {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .about-description {
+    font-size: 14px;
+  }
+
+  /* my projects container */
+
+  .projects-list {
+    margin-bottom: 20px;
+  }
+
+  .projects-wrap {
+    white-space: nowrap;
+    margin-left: 20px;
+    font-size: 12px;
+  }
 }
