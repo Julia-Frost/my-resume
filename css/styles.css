@@ -69,12 +69,12 @@ svg {
 .title {
   font-weight: bold;
   font-size: 22px;
-  color: #fa8072;
+  color: #fdbd8e;
 
   margin-bottom: 20px;
 }
 
-@keyframes cycle {
+/* @keyframes cycle {
   35% {
     transform: rotate(0) translate(0, 0);
   }
@@ -99,7 +99,7 @@ svg {
   70% {
     transform: rotate(0) translate(0, 0) scale(1.4);
   }
-}
+} */
 
 /* Оформление */
 
@@ -160,12 +160,14 @@ svg {
   border-radius: 50px;
   font-size: 16px;
   color: #ffffff;
-  background-color: #374f73;
-  transition: background-color 300ms linear, transform 300ms linear;
+  background-color: #7a7373;
+  transition: background-color 300ms linear, transform 300ms linear, box-shadow 300ms linear;
 }
 
 .projects-portfolio-button:hover {
-  background-color: #2a3c56;
+  background-color: #9b9292;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.274), 0px 4px 4px rgba(0, 0, 0, 0.295),
+    1px 4px 6px rgba(0, 0, 0, 0.326);
   transform: scale(1.2);
   /* animation-name: cycle;
   animation-duration: 1000ms; */
@@ -227,9 +229,10 @@ svg {
 /* sidebar */
 
 .sidebar {
-  background-color: #1e2939;
+  background-color: #9b9292;
+  box-shadow: inset 0px 0px 20px 0px #00000090;
   width: 300px;
-  color: #ffffff;
+  color: #fdbd8e;
 }
 
 .sidebar-wrap {
@@ -245,52 +248,82 @@ svg {
 }
 
 .contacts-link {
-  color: #42adff;
+  color: #ffffff;
+  transition: color 250ms linear;
+}
+.contacts-link:hover,
+.contacts-link:focus {
+  color: #89ceff;
 }
 
 .social-list {
+  margin-top: 20px;
   display: flex;
-  align-items: center;
-  justify-content: start;
+  grid-area: 2 / 2 / 3 / 3;
 }
 
 .social-item:not(:last-child) {
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25px;
-  height: 25px;
-  background: radial-gradient(circle, #faa554 0%, #ff5571 100%);
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, #6071c7 0%, #8ed5fd 100%);
   border-radius: 50%;
   padding: 5px;
   fill: #ffffff;
+  filter: brightness(1);
+  transition: transform 300ms linear, filter 300ms linear;
+}
+
+.social-link:hover {
+  transform: scale(1.3);
+  filter: brightness(1.2);
+}
+
+.social-link:focus {
+  outline: 2px solid #6071c7;
+  outline-offset: 4px;
+  filter: brightness(1.1);
+  transform: scale(1.3);
 }
 
 .social-icon {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
 }
 
 .tech-skills-item:not(:last-child) {
   margin-bottom: 10px;
 }
 
+.tech-skills-text {
+  color: #ffffff;
+}
+
 .soft-skills-item:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.soft-skills-text {
+  color: #ffffff;
 }
 
 .languages-item:not(:last-child) {
   margin-bottom: 10px;
 }
 
+.languages-text {
+  color: #ffffff;
+}
+
 @media (min-width: 768px) and (max-width: 1200px) {
   .container {
     max-width: 768px;
-    padding: 0 15px;
   }
 
   .title {
